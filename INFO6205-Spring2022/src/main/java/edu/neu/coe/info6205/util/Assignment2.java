@@ -20,7 +20,7 @@ public class Assignment2 {
             Integer[] orderedOrder = new Integer[differentN[i]];
             generateOrdered(orderedOrder);
 
-            double mean = benchmarkTimer.runFromSupplier(() -> orderedOrder, 1000);
+            double mean = benchmarkTimer.runFromSupplier(() -> orderedOrder, 3000);
 
             System.out.println(new StringBuilder().append("n is ")
                     .append(differentN[i]).append("  The mean of running time:").append(mean).toString());
@@ -45,7 +45,7 @@ public class Assignment2 {
 
         for (int i = 0; i < differentN.length; i++){
             InsertionSort sorter = new InsertionSort();
-            Benchmark_Timer benchmarkTimer = new Benchmark_Timer("The array type: Random order "
+            Benchmark_Timer benchmarkTimer = new Benchmark_Timer("The array type: Partially order "
                     , null, t -> { sorter.sort((Integer[]) t, true);} , null);
 
             Integer[] partiallyOrder = new Integer[differentN[i]];
