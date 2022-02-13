@@ -93,6 +93,7 @@ public class Assignment2 {
         for(int i = 0; i < array.length; i++) array[i] = array.length - i;
     }
 
+
     /**
      * Generate an array in Random Order
      *
