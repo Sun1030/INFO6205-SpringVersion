@@ -24,6 +24,7 @@ public class Assignment3_Union_Find {
             int j = generateRandomIndex2(n, i);
             countNum++;
             if (!test.isConnected(i, j)) {
+                // Should I put the countNum++ here?
                 test.union(i, j);
             }
         }
@@ -39,7 +40,10 @@ public class Assignment3_Union_Find {
         return mulCount/i;
     }
     public static void main(String[] args){
-        System.out.println(doMultiCount(100, 100));
+        int[] numOfSites = {750, 1500, 3000, 6000,12000, 24000};
 
+        for(int i: numOfSites) {
+            System.out.println("The number of objects (n): " + i + "\t\tThe number of pairs(m) generated: " + doMultiCount(i, 500));
+        }
     }
 }
