@@ -7,24 +7,15 @@ public class Assignment3_Union_Find {
         return (int)(Math.random() * i);
     }
 
-    //generate a random number between 0 to i and different from the int n;
-    public static int generateRandomIndex2(int i, int n){
-        int r = (int)(Math.random() * i);
-        while (r == n){
-            r = (int)(Math.random() * i);
-        }
-        return r;
-    }
 
     public static int count(int n){
         int countNum = 0;
         UF_HWQUPC test = new UF_HWQUPC(n);
         while(test.components() > 1){
             int i = generateRandomIndex1(n);
-            int j = generateRandomIndex2(n, i);
-            countNum++;
-            if (!test.isConnected(i, j)) {
-                // Should I put the countNum++ here?
+            int j = generateRandomIndex1(n);
+            if (!test.connected(i, j)) {
+                countNum++;
                 test.union(i, j);
             }
         }
@@ -43,7 +34,7 @@ public class Assignment3_Union_Find {
         int[] numOfSites = {750, 1500, 3000, 6000,12000, 24000};
 
         for(int i: numOfSites) {
-            System.out.println("The number of objects (n): " + i + "\t\tThe number of pairs(m) generated: " + doMultiCount(i, 500));
+            System.out.println("The number of objects (n): " + i + "\t\tThe number of pairs(m) generated: " + doMultiCount(i, 100));
         }
     }
 }
