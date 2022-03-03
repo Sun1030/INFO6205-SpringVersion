@@ -30,6 +30,7 @@ public class Assignment3_Union_Find {
         }
         return mulCount/i;
     }
+
     public static void main(String[] args){
         int[] numOfSites = {750, 1500, 3000, 6000, 12000, 24000};
 
