@@ -31,7 +31,7 @@ public class Assignment3_Union_Find {
         return mulCount/i;
     }
     public static void main(String[] args){
-        int[] numOfSites = {750, 1500, 3000, 6000,12000, 24000};
+        int[] numOfSites = {750, 1500, 3000, 6000, 12000, 24000};
 
         for(int i: numOfSites) {
             System.out.println("The number of objects (n): " + i + "\t\tThe number of pairs(m) generated: " + doMultiCount(i, 100));
