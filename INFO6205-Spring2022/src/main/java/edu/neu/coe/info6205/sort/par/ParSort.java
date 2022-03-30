@@ -44,6 +44,7 @@ class ParSort {
         }
     }
 
+
     private static CompletableFuture<int[]> parsort(int[] array, int from, int to) {
         return CompletableFuture.supplyAsync(
                 () -> {

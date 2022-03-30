@@ -77,6 +77,7 @@ public class Main {
         }
     }
 
+
     public static void doSort(int number, int size){
         ForkJoinPool partPool = new ForkJoinPool(number);
         System.out.println("Degree of parallelism: " + partPool.getParallelism() + " Array Size:" + size);
